@@ -2,6 +2,7 @@ const title = document.querySelector("#page-title");
 const btn = document.querySelector("#mode-selector");
 const footer = document.querySelector("footer");
 const body = document.querySelector("body");
+const darkModeClass = "dark-mode";
 
 btn.addEventListener("click", changeMode);
 
@@ -12,21 +13,21 @@ function changeMode() {
 
 function changeTexts() {
 
-    let darkModeClass = title.classList.contains("dark-mode");
+    let containClass = title.classList.contains(darkModeClass);
 
-    if (darkModeClass) {
+    if (containClass) {
         title.innerHTML = "Dark Mode ON";
         btn.innerHTML = "Light Mode";
     } else {
         title.innerHTML = "Light Mode ON";
         btn.innerHTML = "Dark Mode";
     }
-    
+
 }
 
 function changeClasses() {
-    title.classList.toggle("dark-mode");
-    btn.classList.toggle("dark-mode");
-    footer.classList.toggle("dark-mode");
-    body.classList.toggle("dark-mode");
+    title.classList.toggle(darkModeClass);
+    btn.classList.toggle(darkModeClass);
+    footer.classList.toggle(darkModeClass);
+    body.classList.toggle(darkModeClass);
 }
