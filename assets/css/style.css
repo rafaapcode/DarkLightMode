@@ -50,6 +50,7 @@ button {
 
 button:hover {
 	background-color: #000401;
+	transform: translateY(-2px);
 }
 
 button.dark-mode {
@@ -60,4 +61,5 @@ button.dark-mode {
 button.dark-mode:hover {
 	background-color: #4e545c;
 	color: #e5e8e8;
+	transform: translateY(2px);
 }
